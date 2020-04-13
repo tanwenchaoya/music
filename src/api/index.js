@@ -1,0 +1,10 @@
+import network from './network'
+export const getBanner = () => network.get('/banner?type=2')
+export const getPersonalized = () => network.get('/personalized?limit=6')
+export const getNewAlbum = () => network.get('/album/newest')
+export const getNewSong = () => network.get('/personalized/newsong')
+export const getPlayList = (data) => network.get('/playlist/detail', data)
+export const getAlbum = (data) => network.get('/album', data)
+export const getSongDetail = (data) => network.get('/song/detail', data)
+export const getSongLyric = (data) => network.get('/lyric', data)
+export const getSongUrl = (data) => network.get('/song/url', data)

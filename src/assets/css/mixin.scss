@@ -64,12 +64,13 @@
 }
 
 @mixin border_color(){
-  border-color: $border-color-theme;
+  border-bottom: 3px solid #000;
+  border-bottom-color: $border-color-theme;
   [data-theme=theme1] & {
-    border-color: $border-color-theme1;
+    border-bottom-color: $border-color-theme1;
   }
   [data-theme=theme2] & {
-    border-color: $border-color-theme2;
+    border-bottom-color: $border-color-theme2;
   }
 }
 
@@ -104,5 +105,6 @@
   [data-theme=theme2][data-dpr='3'] & {
     background-image: url($url + '_it666@3x.png');
   }
+
 }
 
