@@ -12,5 +12,6 @@ export default {
   showMask: false,
   curTime: 0,
   favoriteList: [],
-  historyList: []
+  historyList: [],
+  switchNum: 0
 }

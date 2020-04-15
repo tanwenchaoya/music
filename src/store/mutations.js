@@ -72,8 +72,9 @@ export default {
   },
   setHistoryList (state, song) {
     let result = state.historyList.find(function (value) {
-      return value === song
+      return value.id === song.id
     })
+    console.log(result)
     if (result === undefined) {
       if (state.historyList.length > 20) {
         state.historyList.splice(0, 1)
@@ -84,5 +85,8 @@ export default {
   // 将播放历史保存在本地
   setLocalHistoryList (state, list) {
     state.historyList = list
+  },
+  setSwitchNum (state, flag) {
+    state.switchNum = flag
   }
 }

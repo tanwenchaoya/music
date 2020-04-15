@@ -74,6 +74,9 @@ export default {
   },
   setLocalHistoryList ({ commit }, song) {
     commit('setLocalHistoryList', song)
+  },
+  setSwitchNum ({ commit }, flag) {
+    commit('setSwitchNum', flag)
   }
 }
 // 格式化歌词方法

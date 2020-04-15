@@ -47,5 +47,8 @@ export default {
   },
   historyList (state) {
     return state.historyList
+  },
+  switchNum (state) {
+    return state.switchNum
   }
 }

@@ -2,7 +2,7 @@
   <div class="header" @click="change">
     <div class="header-left"></div>
     <p class="title">Music</p>
-    <div class="header-right"></div>
+    <div class="header-right" @click.stop="skipToAccount"></div>
   </div>
 </template>
 
@@ -22,6 +22,11 @@ export default {
         this.index = 0
       }
       document.documentElement.setAttribute('data-theme', this.themes[this.index])
+    },
+    skipToAccount () {
+      this.$router.push({
+        path: '/account'
+      })
     }
   }
 }
