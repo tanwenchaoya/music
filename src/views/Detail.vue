@@ -12,7 +12,7 @@
 </template>
 
 <script>
-import { getPlayList, getAlbum } from '../api/index'
+import { getPlayList, getAlbum, getArtistsSong } from '../api/index'
 import SubHeader from '../components/Detail/SubHeader'
 import DetailTop from '../components/Detail/DetailTop'
 import DetailBottom from '../components/Detail/DetailBottom'
@@ -39,13 +39,26 @@ export default {
         .catch(function (err) {
           console.log(err)
         })
-    } else {
+    } else if (this.$route.params.type === 'albums') {
       getAlbum({ id: this.$route.params.id })
         .then((data) => {
           this.playlist = {
             name: data.album.name,
             coverImgUrl: data.album.picUrl,
             tracks: data.songs
+          }
+        })
+        .catch(function (err) {
+          console.log(err)
+        })
+    } else if (this.$route.params.type === 'singer') {
+      getArtistsSong({ id: this.$route.params.id })
+        .then((data) => {
+          console.log(data)
+          this.playlist = {
+            name: data.artist.name,
+            coverImgUrl: data.artist.picUrl,
+            tracks: data.hotSongs
           }
         })
         .catch(function (err) {

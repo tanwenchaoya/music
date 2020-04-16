@@ -60,11 +60,10 @@ export default {
     currentTime (newValue, oldValue) {
       let lineNum = Math.floor(newValue)
       this.currentLineNum = this.getActiveLineNum(lineNum)
-
       let currLyricTop = document.querySelector('li.active').offsetTop
       let lyricHeight = this.$refs.lyric.$el.offsetHeight
       if (currLyricTop > lyricHeight / 2) {
-        this.$refs.ScrollView.scrollTo(0, lyricHeight / 2 - currLyricTop, 40)
+        this.$refs.ScrollView.scrollTo(0, lyricHeight / 2 - currLyricTop, 20)
       }
     },
     currentLyric (newValue, oldValue) {
