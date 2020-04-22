@@ -140,11 +140,12 @@ export default {
   .list-wrapper{
     .list-group{
       .group-title{
-        height: 60px;
-        line-height: 60px;
-        padding:0 15px;
+        height: 40px;
+        line-height: 40px;
+        padding:0 20px;
         @include bg_color();
-        @include font_size($font_large);
+        @include font_size($font_medium);
+        opacity: 0.6;
       }
     }
     ul{
@@ -188,12 +189,12 @@ export default {
   .currentTopKey{
     position: fixed;
     top: 184px;
-    height: 60px;
+    height: 40px;
     width: 100%;
-    line-height: 60px;
-    padding:0 15px;
+    line-height: 40px;
+    padding:0 20px;
     @include bg_color();
-    @include font_size($font_large);
+    @include font_size($font_medium);
   }
 
 }

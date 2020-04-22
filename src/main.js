@@ -13,7 +13,7 @@ Vue.use(VueLazyload, {
 })
 fastclick.attach(document.body)
 Vue.config.productionTip = false
-
+console.log(store)
 new Vue({
   router,
   store,

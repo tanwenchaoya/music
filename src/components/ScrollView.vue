@@ -11,7 +11,7 @@ export default {
   mounted () {
     this.iscroll = new Iscroll(this.$refs.wrapper, {
       mouseWheel: true,
-      click: true,
+      // click: true,
       scrollbars: false,
       probeType: 3,
       scrollX: false,
