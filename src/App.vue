@@ -2,7 +2,9 @@
   <div id="app">
     <Header></Header>
     <Tabbar></Tabbar>
-    <router-view></router-view>
+    <keep-alive include="Singer">
+      <router-view></router-view>
+    </keep-alive>
     <Player></Player>
   </div>
 </template>

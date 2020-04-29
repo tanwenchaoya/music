@@ -1,5 +1,4 @@
 import network from './network'
-
 export const getBanner = () => network.get('/banner?type=2')
 export const getPersonalized = () => network.get('/personalized?limit=6')
 export const getNewAlbum = () => network.get('/album/newest')
@@ -119,3 +118,5 @@ export const getTopList = () => {
   })
 }
 export const getTopListDetail = (data) => network.get('top/list', data)
+export const getSearchSuggest = (data) => network.get('search?type=1', data)
+export const getHotListDetail = (data) => network.get('/search/hot/detail')
